@@ -6,6 +6,9 @@ import IconButton from '@material-ui/core/IconButton';
 import Style from '@material-ui/icons/Style';
 
 const Nav = () => {
+  const navStyles = {
+    position: 'static'
+  }
   const logoStyles = {
     color: '#fff',
     fontSize: '1.5em',
@@ -23,7 +26,7 @@ const Nav = () => {
   }
   return(
     <div>
-      <AppBar>
+      <AppBar style={navStyles}>
         <Toolbar>
           <IconButton>
             <Style style={logoStyles}/>

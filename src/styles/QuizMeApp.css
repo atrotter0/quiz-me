@@ -9,9 +9,9 @@
 }
 
 .page-content {
+  width: 80%;
   max-width: 1000px;
-  outline: 1px solid red;
   color: #000;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
