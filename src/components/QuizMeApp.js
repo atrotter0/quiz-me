@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './QuizMeApp.css';
+import '../styles/QuizMeApp.css';
 
 class QuizMeApp extends Component {
   render() {
