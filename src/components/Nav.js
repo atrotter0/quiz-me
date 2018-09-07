@@ -12,10 +12,12 @@ const Nav = () => {
     backgroundColor: '#106596',
   }
   const logoStyles = {
+    marginTop: '0px',
     color: '#fffffc',
     fontSize: '2em'
   }
   const headerStyles = {
+    marginTop: '20px',
     marginLeft: '25px',
     fontSize: '2em',
     letterSpacing: '3px',
