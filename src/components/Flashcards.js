@@ -1,21 +1,26 @@
 import React from 'react';
-import fetchQuestionData from '../services/fetchQuestionData';
+import fetchAllQuestions from '../services/questionDataService';
 import Flashcard from './Flashcard';
 
 const Flashcards = ({ match }) => {
-  const allQuestions = fetchQuestionData();
+  const allQuestions = fetchAllQuestions();
   const questionsByCategory = allQuestions[match.params.category];
-  console.log(match.params.category);
+  const gridContainerStyles = {
+    display: 'grid',
+    gridTemplateColumns: 'auto auto auto'
+  }
 
   return(
     <div className='page-content'>
-      {questionsByCategory.map((question, index) =>
-        <Flashcard
-          questionText={question.questionText}
-          answerText={question.answerText}
-          key={index}
-        />
-      )}
+      <div style={gridContainerStyles}>
+        {questionsByCategory.map((question, index) =>
+          <Flashcard
+            questionText={question.questionText}
+            answerText={question.answerText}
+            key={index}
+          />
+        )}
+      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-const fetchQuestionData = () => {
+const fetchAllQuestions = () => {
   const questions = {
     "html-css": [
       {
@@ -58,4 +58,4 @@ const fetchQuestionData = () => {
   return questions;
 }
 
-export default fetchQuestionData;
+export default fetchAllQuestions;
