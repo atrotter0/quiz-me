@@ -15,7 +15,8 @@ const Flashcard = (props) => {
   }
   const flashcardStyles = {
     padding: '10px',
-    height: '200px'
+    height: '200px',
+    color: '#2a2e31'
   }
   const actionButtonStyles = {
     display: 'flex',

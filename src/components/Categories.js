@@ -1,26 +1,14 @@
 import React from 'react';
 import Category from './Category';
 import List from '@material-ui/core/List';
+import fetchAllCategories from '../services/categoryDataService';
 
-const categoryData = [
-  {
-    route: '/categories/html-css',
-    name: 'HTML/CSS'
-  },
-  {
-    route: '/categories/javascript',
-    name: 'JavaScript'
-  },
-  {
-    route: '/categories/ruby',
-    name: 'Ruby'
-  }
-]
 const Categories = () => {
+  const categories = fetchAllCategories();
   return(
     <div className='page-content'>
       <List>
-      {categoryData.map((category, index) =>
+      {categories.map((category, index) =>
         <Category
           route={category.route}
           name={category.name}

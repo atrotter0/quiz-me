@@ -9,11 +9,11 @@ import Button from '@material-ui/core/Button';
 const Nav = () => {
   const navStyles = {
     position: 'static',
-    backgroundColor: '#106596',
+    backgroundColor: '#b4dcff',
   }
   const logoStyles = {
     marginTop: '0px',
-    color: '#fffffc',
+    color: '#2a2e31',
     fontSize: '2em'
   }
   const headerStyles = {
@@ -28,7 +28,7 @@ const Nav = () => {
     marginLeft: '25px'
   }
   const linkStyles = {
-    color: '#fffffc',
+    color: '#2a2e31',
     textDecoration: 'none',
     marginRight: '20px'
   }
