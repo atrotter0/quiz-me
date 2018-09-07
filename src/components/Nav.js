@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import Style from '@material-ui/icons/Style';
+import ImportContacts from '@material-ui/icons/ImportContacts';
 
 const Nav = () => {
   const navStyles = {
@@ -29,7 +29,7 @@ const Nav = () => {
       <AppBar style={navStyles}>
         <Toolbar>
           <IconButton>
-            <Style style={logoStyles}/>
+            <ImportContacts style={logoStyles}/>
           </IconButton>
           <h2 style={headerStyles}>
             <Link to='/' style={linkStyles}>Quiz Me!</Link>
