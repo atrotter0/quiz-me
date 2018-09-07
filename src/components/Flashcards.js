@@ -5,6 +5,7 @@ import Flashcard from './Flashcard';
 const Flashcards = ({ match }) => {
   const allQuestions = fetchQuestionData();
   const questionsByCategory = allQuestions[match.params.category];
+  console.log(match.params.category);
 
   return(
     <div className='page-content'>

@@ -4,15 +4,15 @@ import List from '@material-ui/core/List';
 
 const categoryData = [
   {
-    route: '/category/html-css',
+    route: '/categories/html-css',
     name: 'HTML/CSS'
   },
   {
-    route: '/category/javascript',
+    route: '/categories/javascript',
     name: 'JavaScript'
   },
   {
-    route: '/category/ruby',
+    route: '/categories/ruby',
     name: 'Ruby'
   }
 ]

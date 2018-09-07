@@ -13,8 +13,8 @@ class QuizMeApp extends Component {
         <Nav />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/categories' component={Categories} />
-          <Route path='/category/:category' component={Flashcards} />
+          <Route exact path='/categories' component={Categories} />
+          <Route exact path='/categories/:category' component={Flashcards} />
         </Switch>
       </div>
     );
