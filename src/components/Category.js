@@ -9,7 +9,7 @@ const Category = (props) => {
     <div>
       <ListItem button>
         <Code />
-        <ListItemText primary={props.name} />
+        <ListItemText primary={props.name} disableTypography={true}/>
       </ListItem>
       <Divider />
     </div>

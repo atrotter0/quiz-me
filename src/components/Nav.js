@@ -11,18 +11,22 @@ const Nav = () => {
   }
   const logoStyles = {
     color: '#fff',
-    fontSize: '1.5em',
+    fontSize: '2em',
   }
   const headerStyles = {
-    marginLeft: '10px'
+    marginLeft: '25px',
+    letterSpacing: '2px'
   }
   const navLinkBoxStyles = {
     flexGrow: '1',
-    marginLeft: '30px'
+    marginLeft: '25px'
   }
   const linkStyles = {
     color: '#fff',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    fontSize: '1.5em',
+    fontFamily: 'Oswald, sans-serif',
+    marginRight: '20px'
   }
   return(
     <div>
@@ -36,6 +40,8 @@ const Nav = () => {
           </h2>
           <div style={navLinkBoxStyles}>
             <Link to='/categories' style={linkStyles}>Categories</Link>
+            <Link to='/' style={linkStyles}>About</Link>
+            <Link to='/' style={linkStyles}>Contact</Link>
           </div>
         </Toolbar>
       </AppBar>
