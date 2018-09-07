@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Flashcard = () => {
+const Flashcard = (props) => {
   return(
     <div>
-      This is a test flashcard!
+      <p>Question: {props.questionText}</p>
+      <p>Answer: {props.answerText}</p>
     </div>
   );
 }
