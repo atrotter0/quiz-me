@@ -4,29 +4,35 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import ImportContacts from '@material-ui/icons/ImportContacts';
+import Button from '@material-ui/core/Button';
 
 const Nav = () => {
   const navStyles = {
-    position: 'static'
+    position: 'static',
+    backgroundColor: '#106596',
   }
   const logoStyles = {
-    color: '#fff',
-    fontSize: '2em',
+    color: '#fffffc',
+    fontSize: '2em'
   }
   const headerStyles = {
     marginLeft: '25px',
-    letterSpacing: '2px'
+    fontSize: '2em',
+    letterSpacing: '3px',
+    fontFamily: 'Oswald, sans-serif'
   }
   const navLinkBoxStyles = {
     flexGrow: '1',
     marginLeft: '25px'
   }
   const linkStyles = {
-    color: '#fff',
+    color: '#fffffc',
     textDecoration: 'none',
-    fontSize: '1.5em',
-    fontFamily: 'Oswald, sans-serif',
     marginRight: '20px'
+  }
+  const buttonStyles = {
+    fontSize: '1em',
+    fontFamily: 'Oswald, sans-serif'
   }
   return(
     <div>
@@ -39,9 +45,21 @@ const Nav = () => {
             <Link to='/' style={linkStyles}>Quiz Me!</Link>
           </h2>
           <div style={navLinkBoxStyles}>
-            <Link to='/categories' style={linkStyles}>Categories</Link>
-            <Link to='/' style={linkStyles}>About</Link>
-            <Link to='/' style={linkStyles}>Contact</Link>
+            <Link to='/categories' style={linkStyles}>
+              <Button color='inherit' size='large' style={buttonStyles}>
+                Categories
+              </Button>
+            </Link>
+            <Link to='/' style={linkStyles}>
+              <Button color='inherit' size='large' style={buttonStyles}>
+                About
+              </Button>
+            </Link>
+            <Link to='/' style={linkStyles}>
+              <Button color='inherit' style={buttonStyles}>
+                Contact
+              </Button>
+            </Link>
           </div>
         </Toolbar>
       </AppBar>
