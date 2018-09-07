@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import '../styles/QuizMeApp.css';
 import Nav from './Nav';
 import Home from './Home';
-import Cards from './Cards';
+import Categories from './Categories';
 
 class QuizMeApp extends Component {
   render() {
@@ -12,7 +12,7 @@ class QuizMeApp extends Component {
         <Nav />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/html-css' key='html-css' component={Cards} />
+          <Route path='/categories' component={Categories} />
         </Switch>
       </div>
     );

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Home = () => {
+const Categories = () => {
   return(
     <div className='page-content'>
-      This is the Homepage!
+      Categories page
     </div>
   );
 }
 
-export default Home;
+export default Categories;

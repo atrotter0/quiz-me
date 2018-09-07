@@ -14,12 +14,12 @@ const Nav = () => {
     marginLeft: '10px'
   }
   const navLinkBoxStyles = {
-    outline: '1px solid red',
     flexGrow: '1',
     marginLeft: '30px'
   }
   const linkStyles = {
-    color: '#fff'
+    color: '#fff',
+    textDecoration: 'none'
   }
   return(
     <div>
@@ -28,12 +28,11 @@ const Nav = () => {
           <IconButton>
             <Style style={logoStyles}/>
           </IconButton>
-          <h2 style={headerStyles}>Quiz Me!</h2>
+          <h2 style={headerStyles}>
+            <Link to='/' style={linkStyles}>Quiz Me!</Link>
+          </h2>
           <div style={navLinkBoxStyles}>
-            <Link to='/html-css' style={linkStyles}>HTML/CSS</Link>
-            <Link to='/javascript' style={linkStyles}>JavaScript</Link>
-            <Link to='/ruby' style={linkStyles}>Ruby</Link>
-            <Link to='/csharp' style={linkStyles}>C#</Link>
+            <Link to='/categories' style={linkStyles}>Categories</Link>
           </div>
         </Toolbar>
       </AppBar>
