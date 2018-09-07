@@ -4,52 +4,16 @@ import List from '@material-ui/core/List';
 
 const categoryData = [
   {
-    name: 'HTML/CSS',
-    questions: [
-      
-    ]
+    route: '/category/html-css',
+    name: 'HTML/CSS'
   },
   {
-    name: 'JavaScript',
-    questions: [
-      
-    ]
+    route: '/category/javascript',
+    name: 'JavaScript'
   },
   {
-    name: 'Ruby',
-    questions: [
-      
-    ]
-  },
-  {
-    name: 'C#',
-    questions: [
-      
-    ]
-  },
-  {
-    name: 'Angular',
-    questions: [
-      
-    ]
-  },
-  {
-    name: 'React',
-    questions: [
-      
-    ]
-  },
-  {
-    name: 'Rails',
-    questions: [
-      
-    ]
-  },
-  {
-    name: 'ASP.NET',
-    questions: [
-      
-    ]
+    route: '/category/ruby',
+    name: 'Ruby'
   }
 ]
 const Categories = () => {
@@ -58,8 +22,8 @@ const Categories = () => {
       <List>
       {categoryData.map((category, index) =>
         <Category
+          route={category.route}
           name={category.name}
-          questions={category.questions}
           key={index}
         />
       )}

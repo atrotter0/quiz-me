@@ -4,6 +4,7 @@ import '../styles/QuizMeApp.css';
 import Nav from './Nav';
 import Home from './Home';
 import Categories from './Categories';
+import Flashcards from './Flashcards';
 
 class QuizMeApp extends Component {
   render() {
@@ -12,7 +13,8 @@ class QuizMeApp extends Component {
         <Nav />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/categories' component={Categories} />
+          <Route path='/categories' component={Categories} />
+          <Route path='/category/:category' component={Flashcards} />
         </Switch>
       </div>
     );
