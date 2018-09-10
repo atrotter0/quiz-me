@@ -8,6 +8,7 @@ import ThumbDown from '@material-ui/icons/ThumbDown';
 import StarBorder from '@material-ui/icons/StarBorder';
 import Star from '@material-ui/icons/Star';
 import Tooltip from '@material-ui/core/Tooltip';
+import PropTypes from 'prop-types';
 
 const Flashcard = (props) => {
   const gridItemStyles = {
@@ -53,5 +54,11 @@ const Flashcard = (props) => {
     </div>
   );
 }
+
+Flashcard.propTypes = {
+  questionText: PropTypes.string,
+  answerText: PropTypes.string,
+  key: PropTypes.string
+};
 
 export default Flashcard;

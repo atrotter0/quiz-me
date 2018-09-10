@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Code from '@material-ui/icons/Code';
+import PropTypes from 'prop-types';
 
 const Category = (props) => {
   const linkStyles = {
@@ -24,5 +25,11 @@ const Category = (props) => {
     </div>
   );
 }
+
+Category.propTypes = {
+  route: PropTypes.string,
+  name: PropTypes.string,
+  key: PropTypes.string
+};
 
 export default Category;
