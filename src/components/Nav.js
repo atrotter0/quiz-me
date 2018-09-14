@@ -15,11 +15,11 @@ const Nav = () => {
     marginTop: '0px',
     marginLeft: '50px',
     color: '#2a2e31',
-    fontSize: '2em'
+    fontSize: '3.5em',
   }
   const headerStyles = {
     marginTop: '20px',
-    marginLeft: '55px',
+    marginLeft: '45px',
     fontSize: '2em',
     letterSpacing: '3px',
     fontFamily: 'Oswald, sans-serif'
@@ -41,26 +41,24 @@ const Nav = () => {
     <div>
       <AppBar style={navStyles}>
         <Toolbar>
-          <IconButton>
-            <ImportContacts style={logoStyles}/>
-          </IconButton>
+          <ImportContacts style={logoStyles}/>
           <h2 style={headerStyles}>
             <Link to='/' style={linkStyles}>Quiz Me!</Link>
           </h2>
           <div style={navLinkBoxStyles}>
+            <Link to='/' style={linkStyles}>
+              <Button color='inherit' size='large' style={buttonStyles}>
+                How To
+              </Button>
+            </Link>
             <Link to='/categories' style={linkStyles}>
               <Button color='inherit' size='large' style={buttonStyles}>
                 Categories
               </Button>
             </Link>
-            <Link to='/' style={linkStyles}>
-              <Button color='inherit' size='large' style={buttonStyles}>
-                About
-              </Button>
-            </Link>
-            <Link to='/' style={linkStyles}>
+            <Link to='/add-card' style={linkStyles}>
               <Button color='inherit' style={buttonStyles}>
-                Contact
+                Add Card
               </Button>
             </Link>
           </div>

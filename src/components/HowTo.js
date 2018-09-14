@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Home = () => {
+const HowTo = () => {
   return(
     <div className='page-content'>
-      My Homepage
+      How To
     </div>
   );
 }
 
-export default Home;
+export default HowTo;

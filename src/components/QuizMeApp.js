@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import '../styles/QuizMeApp.css';
 import Nav from './Nav';
-import Home from './Home';
+import HowTo from './HowTo';
 import Categories from './Categories';
 import Flashcards from './Flashcards';
 import Error404 from './Error404';
@@ -92,7 +92,7 @@ class QuizMeApp extends Component {
         <Switch>
           <Route
             exact path='/'
-            component={Home} 
+            component={HowTo} 
           />
           <Route
             exact path='/categories'
