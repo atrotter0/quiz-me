@@ -4,7 +4,7 @@ import Flashcard from './Flashcard';
 const Flashcards = (props) => {
   const gridContainerStyles = {
     display: 'grid',
-    gridTemplateColumns: 'auto auto auto'
+    gridTemplateColumns: '1fr 1fr 1fr'
   }
   return(
     <div className='page-content'>
