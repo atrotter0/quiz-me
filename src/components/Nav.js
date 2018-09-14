@@ -13,12 +13,13 @@ const Nav = () => {
   }
   const logoStyles = {
     marginTop: '0px',
+    marginLeft: '50px',
     color: '#2a2e31',
     fontSize: '2em'
   }
   const headerStyles = {
     marginTop: '20px',
-    marginLeft: '25px',
+    marginLeft: '55px',
     fontSize: '2em',
     letterSpacing: '3px',
     fontFamily: 'Oswald, sans-serif'
