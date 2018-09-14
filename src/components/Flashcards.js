@@ -1,5 +1,5 @@
 import React from 'react';
-import fetchAllQuestions from '../services/questionDataService';
+import { fetchAllQuestions } from '../services/dataService';
 import Flashcard from './Flashcard';
 
 const Flashcards = ({ match }) => {
