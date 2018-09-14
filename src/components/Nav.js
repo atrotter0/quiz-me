@@ -55,9 +55,9 @@ const Nav = () => {
                 Categories
               </Button>
             </Link>
-            <Link to='/add-card' style={linkStyles}>
+            <Link to='/add-flashcard' style={linkStyles}>
               <Button color='inherit' style={buttonStyles}>
-                Add Card
+                Add FlashCard
               </Button>
             </Link>
           </div>

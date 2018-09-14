@@ -6,6 +6,7 @@ import HowTo from './HowTo';
 import Categories from './Categories';
 import Flashcards from './Flashcards';
 import Error404 from './Error404';
+import AddFlashCard from './AddFlashcard';
 
 class QuizMeApp extends Component {
   constructor(props) {
@@ -103,6 +104,10 @@ class QuizMeApp extends Component {
           <Route
             exact path='/categories/:category'
             render={(props) => <Flashcards currentPath={props.location.pathname} questions={this.state.questions} />}
+          />
+          <Route
+            exact path='/add-flashcard'
+            component={AddFlashCard} 
           />
           <Route component={Error404} />
         </Switch>
