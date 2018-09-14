@@ -15,12 +15,23 @@ class Flashcard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showQuestionHideAnswer: true
+      showQuestionHideAnswer: true,
+      right: null,
+      wrong: null,
+      onStudyList: false
     };
     this.toggleShowQuestionHideAnswer = this.toggleShowQuestionHideAnswer.bind(this);
   }
   toggleShowQuestionHideAnswer = () => {
     this.setState({showQuestionHideAnswer: !this.state.showQuestionHideAnswer});
+  }
+  setRightAnswer = () => {
+    this.setState({right: true});
+    this.setState({wrong: false});
+  }
+  setWrongAnswer = () => {
+    this.setState({right: false});
+    this.setState({wrong: true});
   }
   render() {
     const gridItemStyles = {
@@ -29,43 +40,58 @@ class Flashcard extends React.Component {
     }
     const flashcardStyles = {
       padding: '10px',
-      height: '200px',
+      height: '250px',
       color: '#2a2e31'
     }
+    const cardContentStyles = {
+      height: '100px'
+    }
     const showAnswerButtonStyles = {
-      margin: '0 auto'
+      margin: '30 auto',
+      textAlign: 'center'
     }
     const actionButtonStyles = {
-      marginTop: '40px',
+      marginTop: '30px',
       display: 'flex',
       justifyContent: 'space-between',
       width: '100%'
     }
+    const clickedThumbStyles = {
+      color: '#3f51b5'
+    }
     return(
       <div style={gridItemStyles}>
         <Card style={flashcardStyles}>
-          <CardContent>
+          <CardContent style={cardContentStyles}>
             {
               this.state.showQuestionHideAnswer ?
               <p>{this.props.questionText}</p> :
               <p>{this.props.answerText}</p>
             }
           </CardContent>
+          <div style={showAnswerButtonStyles}>
+            <Button variant='outlined' onClick={this.toggleShowQuestionHideAnswer}>
+              {this.state.showQuestionHideAnswer ? <span>Show Answer</span> : <span>Show Question</span>}
+            </Button>
+          </div>
           <CardActions>
-            {
-              this.state.showQuestionHideAnswer ?
-              <div style={showAnswerButtonStyles}>
-                <Button variant='outlined' onClick={this.toggleShowQuestionHideAnswer}>Show Answer</Button>
-              </div> :
-              <div style={actionButtonStyles}>
+            <div style={actionButtonStyles}>
                 <Tooltip title='I got it right!'>
-                  <IconButton>
-                    <ThumbUp />
+                  <IconButton onClick={this.setRightAnswer}>
+                    {
+                      this.state.right ?
+                      <ThumbUp style={clickedThumbStyles} /> :
+                      <ThumbUp />
+                    }
                   </IconButton>
                 </Tooltip>
                 <Tooltip title='I got it wrong.'>
-                  <IconButton>
-                    <ThumbDown />
+                  <IconButton onClick={this.setWrongAnswer}>
+                    {
+                      this.state.wrong ?
+                      <ThumbDown style={clickedThumbStyles} /> :
+                      <ThumbDown />
+                    }
                   </IconButton>
                 </Tooltip>
                 <Tooltip title='Save to Study List'>
@@ -74,7 +100,6 @@ class Flashcard extends React.Component {
                   </IconButton>
                 </Tooltip>
               </div>
-            }
           </CardActions>
         </Card>
       </div>
