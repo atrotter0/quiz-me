@@ -33,6 +33,9 @@ class Flashcard extends React.Component {
     this.setState({right: false});
     this.setState({wrong: true});
   }
+  toggleOnStudyList = () => {
+    this.setState({onStudyList: !this.state.onStudyList})
+  }
   render() {
     const gridItemStyles = {
       padding: '10px',
@@ -56,8 +59,8 @@ class Flashcard extends React.Component {
       justifyContent: 'space-between',
       width: '100%'
     }
-    const clickedThumbStyles = {
-      color: '#3f51b5'
+    const clickedActionButtonStyles = {
+      color: '#90b9e4'
     }
     return(
       <div style={gridItemStyles}>
@@ -80,7 +83,7 @@ class Flashcard extends React.Component {
                   <IconButton onClick={this.setRightAnswer}>
                     {
                       this.state.right ?
-                      <ThumbUp style={clickedThumbStyles} /> :
+                      <ThumbUp style={clickedActionButtonStyles} /> :
                       <ThumbUp />
                     }
                   </IconButton>
@@ -89,14 +92,18 @@ class Flashcard extends React.Component {
                   <IconButton onClick={this.setWrongAnswer}>
                     {
                       this.state.wrong ?
-                      <ThumbDown style={clickedThumbStyles} /> :
+                      <ThumbDown style={clickedActionButtonStyles} /> :
                       <ThumbDown />
                     }
                   </IconButton>
                 </Tooltip>
                 <Tooltip title='Save to Study List'>
-                  <IconButton>
-                    <StarBorder />
+                  <IconButton onClick={this.toggleOnStudyList}>
+                    {
+                      this.state.onStudyList ?
+                      <Star style={clickedActionButtonStyles} /> :
+                      <StarBorder />
+                    }
                   </IconButton>
                 </Tooltip>
               </div>
